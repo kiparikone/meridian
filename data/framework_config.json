@@ -1,0 +1,62 @@
+[
+  {
+    "id": "69caa269b230f4699500df0d",
+    "framework": "Energy",
+    "market_regime": "Risk-On",
+    "weight_fundamental": 45,
+    "weight_technical": 10,
+    "weight_momentum": 10,
+    "weight_risk": 15,
+    "weight_sentiment": 0,
+    "weight_catalyst": 20,
+    "description": "UPDATED 9/19/26 from Perplexity v1.1 spec refresh (methodology update, NOT a scored run — no locked universe, nothing added to ScoredStock/PredictionLog). Energy has its OWN sector-specific regime taxonomy that does NOT map onto this app's generic Risk-On/Neutral/Risk-Off/Crisis field — recorded here as market_regime=Risk-On to reflect the same broad macro backdrop as the other frameworks, but the framework's real internal classification is 'Supply Disruption + Backwardation', a commodity-cycle regime, distinct from and layered on top of the macro one. REAL DATA as of 8/31/26: WTI $85.71/bbl (+32.6% YoY, +6.7% MoM), Brent $90.70/bbl (+33.2% YoY). Drivers: Middle East geopolitical premium (UAE suspended Iran transactions Aug 19, Strait of Hormuz traffic slow, Russian western-port shipments -15% below plan); IEA cut 2026 global oil supply forecast 4.3 mb/d to 102 mb/d; US crude inventories rose 4.4mb (week of Aug 15, a real counterweight/reversal signal to watch); Energy is the #1 S&P 500 sector YTD at +37.7%; AI datacenter power demand structurally 'at least quadruples in 2026' per Morningstar, a durable multi-year bid under gas peakers/nuclear/grid infra. Framework's own calibration response: moved upstream O&G to the upper half of its 15-50% weight band, activated hurricane-season tail hedges, shifted WTI/Brent base-case price bands upward."
+  },
+  {
+    "id": "69caa269b230f4699500df0e",
+    "framework": "General Stocks",
+    "market_regime": "Risk-On",
+    "weight_fundamental": 57,
+    "weight_technical": 14,
+    "weight_momentum": 14,
+    "weight_risk": 14,
+    "weight_sentiment": 0,
+    "weight_catalyst": 0,
+    "description": "UPDATED 9/19/26 from Perplexity v1.1 spec refresh (methodology update, NOT a scored run — no universe/tickers locked, nothing to add to ScoredStock/PredictionLog without fabricating it). Real Aug 2026 market context the framework is now calibrated against: S&P 500 +12.9% YTD through late Aug, wide sector dispersion (Energy +37.7%, IT +23.7% leading; Comm Services -0.2%, Cons Disc -1.4% lagging). Earnings growth broadening beyond mega-cap tech (Neuberger Berman 3Q26); AI capex extending into the real economy (~40% capex increase expected next 12mo per US Bank, reaching manufacturers/utilities/industrials, not just tech). Consensus 2026 earnings growth >20%. Framework's own read: bull cases should lean on earnings-broadening + AI-capex-extension, NOT pure multiple expansion; bear cases should stress-test crowded AI-hardware positioning and further-rate-hike risk. Non-US/small-cap tailwind noted (EM +24.1%, US small-caps +21.5% in Q2). Consistent with the Risk-On regime already confirmed for AI/Robotics — same macro backdrop, same August 2026 dataset."
+  },
+  {
+    "id": "69caa269b230f4699500df0a",
+    "framework": "AI/Robotics",
+    "market_regime": "Risk-On",
+    "weight_fundamental": 65,
+    "weight_technical": 10,
+    "weight_momentum": 15,
+    "weight_risk": 10,
+    "weight_sentiment": 0,
+    "weight_catalyst": 0,
+    "description": "UPDATED 8/31/26 per v1.1 Perplexity refresh (run_id 6a95cc122a2baa41b8af6174). Regime BEARISH→BULLISH (SPY +21.3%, QQQ +27.3% since 3/28, both above 50DMA, near 52wk highs). REAL v1.1 weights (7 named dimensions, Bayesian update blended 60% with 40% regime-target template, learning_rate 0.15): Revenue Growth 20.7% (was 20.0%), Profitability 14.5% (was 15.0%), Cash Generation 14.0% (was 15.0%), Valuation 12.8% (was 15.0%, biggest cut — PEGA was 'cheap' and still fell), Forward Momentum 17.2% (was 15.0%, biggest increase — strongest winner/loser separator), Balance Sheet 9.1% (was 10.0%), Price Position 11.6% (was 10.0%). SCHEMA NOTE: this entity's 6 generic weight_* fields (technical/fundamental/momentum/risk/sentiment/catalyst) do not map cleanly onto AI/Robotics' actual 7 named dimensions — intentionally left untouched rather than force a lossy mapping. Real weights live in this description as the source of truth until FrameworkConfig is redesigned with a flexible per-framework weights object (mirroring how ScoredStock.dimension_scores already works). v1.2 fixes queued: disable directional-DOWN calls unless regime is confirmed BEARISH; add a QoQ operating-margin trend factor (PEGA's collapse wasn't caught by static-quarter ratios)."
+  },
+  {
+    "id": "69caa269b230f4699500df0b",
+    "framework": "Penny Stocks",
+    "market_regime": "Risk-On",
+    "weight_fundamental": 35,
+    "weight_technical": 10,
+    "weight_momentum": 15,
+    "weight_risk": 25,
+    "weight_sentiment": 0,
+    "weight_catalyst": 15,
+    "description": "UPDATED 9/19/26 from Perplexity v1.1 spec refresh, explicitly dated 8/31/26 to incorporate a live event (methodology update, NOT a scored run — no locked universe, nothing added to ScoredStock/PredictionLog). Penny Stocks has its OWN regime taxonomy that does NOT map onto this app's generic field — recorded here as market_regime=Risk-On for macro consistency with the other frameworks, but the framework's real internal classification is 'Speculative Froth' (Layer 6.5), a distinct, sector-specific overlay. REAL TRIGGERING EVENT: week of Aug 7 2026, Hydrofarm Holdings (HYFM) surged +483.3% in a single week; 5 sub-$5 names (HYFM, CLRO, YXT, NAMI, ADGM) each posted 90%+ weekly gains — a textbook activation of the framework's own Speculative Froth signal. Framework's real, mechanical response under this regime: tightens quality thresholds, RAISES the Legitimacy weight, and CAPS total penny-stock allocation at 15% of portfolio — the framework treats the HYFM-style move as a manipulation-risk signal, not a buy signal, 'the exception, not the rule.' Also real: increased SEC enforcement in OTC markets cited by name (LR-26517, SEC v. Sexton) — framework reads this as improving overall universe quality by reducing fraudulent shells over time. Standard risk note preserved: micro-caps historically decline 50-80% under stress vs ~30% for large-caps (illiquidity, no institutional coverage, governance risk)."
+  },
+  {
+    "id": "69caa269b230f4699500df0c",
+    "framework": "Pharma/Biotech",
+    "market_regime": "Risk-On",
+    "weight_fundamental": 45,
+    "weight_technical": 5,
+    "weight_momentum": 10,
+    "weight_risk": 15,
+    "weight_sentiment": 0,
+    "weight_catalyst": 25,
+    "description": "UPDATED 9/19/26 from Perplexity v1.1 spec refresh (methodology update, NOT a scored run — no locked universe, nothing added to ScoredStock/PredictionLog; see linked BinaryEvent entries for the one piece of this refresh that IS real, dated, loggable data). REAL Aug 2026 pharma context: GLP-1 therapies overtook Keytruda as the top global drug-sales category — tirzepatide+semaglutide projected $84.5B combined in 2026, total GLP-1 sales ~$132B in 2025 (+33.5% YoY); obesity is now the 4th-largest therapeutic category (~$42B, ~190 pipeline assets). Novo Nordisk's oral semaglutide (first oral GLP-1 for obesity) approved by FDA Jan 2026; Pfizer's ecnoglutide approved in China Mar 2026; Lilly's orforglipron (oral small-molecule GLP-1, ATTAIN Ph3: 14.7% body-weight reduction at 45mg) NDA submitted Q1 2026, approval anticipated late 2026/2027. 44+ novel FDA drug approvals in 2025 (pace maintained). M&A increasing as large pharma faces patent cliffs through 2030. No single macro regime label given in this doc — recorded as Risk-On to match the broader Aug 2026 backdrop shared with the other frameworks."
+  }
+]

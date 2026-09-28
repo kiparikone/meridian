@@ -1,0 +1,68 @@
+[
+  {
+    "id": "6a95cc122a2baa41b8af6174",
+    "framework": "AI/Robotics",
+    "run_date": "2026-08-31",
+    "market_regime": "Risk-On",
+    "status": "Completed",
+    "universe_size": 12,
+    "next_run_date": "2026-11-30",
+    "notes": "v1.1 refresh, run via Perplexity (finance connector), Aug 31 2026. Prior run v1.0 was Mar 28 2026 — elapsed 156 days (framework's own 90-day cadence was missed by ~2 months, per Kip's own note). Regime flipped BEARISH→BULLISH: SPY $634.09→$769.35 (+21.3%), QQQ $562.58→$716.43 (+27.3%), both now above 50DMA and within ~1-8% of 52wk highs. Self-scored calibration: directional accuracy 50% (2/4, not distinguishable from coin flip), Spearman rank-return correlation ≈0.24 (weak positive — separated top-2/bottom-2 correctly but middle ranks were noisy), target achievement 50%. v1.2 promotion bar (framework's own, not Kip's): directional accuracy ≥65%, Spearman ≥0.5, target achievement ≥50% — NOT yet cleared. Universe held fixed at the original 12 BOTZ-seeded tickers for calibration continuity (NVDA/ISRG/CGNX/PEGA/DT/PATH/SYM/SOUN/UPST/AI/AVAV/PRCT) — this is the REAL validated framework universe, distinct from AlphaStrata's pre-existing mega-cap AI/Robotics ScoredStock rows (NVDA/MSFT/GOOGL/META/AMZN/TSM/AVGO/AMD/PLTR/INTC/ARKK/AI), which remain unreconciled as of this run — flagged, not fixed, this pass.",
+    "created_date": "2026-08-31T18:46:42.463000"
+  },
+  {
+    "id": "6a86378a06006699fadaf2cc",
+    "framework": "AI/Robotics",
+    "run_date": "2026-03-30",
+    "market_regime": "Risk-Off",
+    "status": "Overdue",
+    "universe_size": 12,
+    "next_run_date": "2026-06-28",
+    "notes": "Backfilled 2026-08-19 from existing ScoredStock/FrameworkConfig data. next_run_date was set but nothing ever checked it — ~7 weeks overdue as of this note, this is the exact staleness gap the CIO Brief build needs to surface.",
+    "created_date": "2026-08-19T23:08:58.250000"
+  },
+  {
+    "id": "6a86378a06006699fadaf2cd",
+    "framework": "Penny Stocks",
+    "run_date": "2026-03-30",
+    "market_regime": "Risk-Off",
+    "status": "Overdue",
+    "universe_size": 8,
+    "next_run_date": "2026-06-28",
+    "notes": "Backfilled 2026-08-19. Same staleness gap as the other 4 frameworks.",
+    "created_date": "2026-08-19T23:08:58.250000"
+  },
+  {
+    "id": "6a86378a06006699fadaf2ce",
+    "framework": "Pharma/Biotech",
+    "run_date": "2026-03-30",
+    "market_regime": "Neutral",
+    "status": "Overdue",
+    "universe_size": 10,
+    "next_run_date": "2026-06-28",
+    "notes": "Backfilled 2026-08-19. Same staleness gap as the other 4 frameworks.",
+    "created_date": "2026-08-19T23:08:58.250000"
+  },
+  {
+    "id": "6a86378a06006699fadaf2cf",
+    "framework": "Energy",
+    "run_date": "2026-03-30",
+    "market_regime": "Neutral",
+    "status": "Overdue",
+    "universe_size": 10,
+    "next_run_date": "2026-06-28",
+    "notes": "Backfilled 2026-08-19. Same staleness gap as the other 4 frameworks.",
+    "created_date": "2026-08-19T23:08:58.250000"
+  },
+  {
+    "id": "6a86378a06006699fadaf2d0",
+    "framework": "General Stocks",
+    "run_date": "2026-03-30",
+    "market_regime": "Risk-Off",
+    "status": "Overdue",
+    "universe_size": 10,
+    "next_run_date": "2026-06-28",
+    "notes": "Backfilled 2026-08-19. Same staleness gap as the other 4 frameworks.",
+    "created_date": "2026-08-19T23:08:58.250000"
+  }
+]
