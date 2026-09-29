@@ -42,3 +42,13 @@ He's not wrong, and this export is a step toward finding out either way without 
 - The CIO Daily Brief page built in Base44 (Aug 19, verification pass pending) is the one piece of *logic*, not just data, currently living only in Base44. If Base44 is dropped, that page's logic (staleness check off ScoringRun.next_run_date, signal surfacing, guardrails) would need to be rebuilt somewhere — likely as a small Python script reading these JSON files, run on demand or via a scheduled task, output to an Artifact. Not urgent; flagged for the Base44-necessity decision, not decided here.
 
 This is a decision for Kip, not a recommendation — organizing the tradeoff, not making the call.
+
+## Update, 2026-09-29: Phase 2 capital actually deployed
+
+Real order-history screenshots (9/29) confirm: SMH sold (final Phase 1 leg, +12.85% real gain, Phase 1 now fully closed) and $940 deployed same-morning into 4 new AI/Robotics positions — AVAV $300 (2.07164 sh @ $144.81), NVDA $300 (1.30369 sh @ $230.12), CGNX $170 (2.89132 sh @ $58.80), DT $170 (2.97631 sh @ $57.12). Roughly a 32/32/18/18 split — close to, not exact, the conviction-tier weighting discussed earlier (Strong Buy names ≈2× Buy names).
+
+This means the liquidation-to-redeployment transition already happened on 9/29, two days ahead of the 10/1 target date. Flagging, not deciding: **Day 0 for Phase 2 could reasonably be set to 9/29** (when real capital actually moved) rather than the calendar-round 10/1 — the earlier-flagged clock-boundary question (original 180-day cadence vs. the already-instrumented Nov 30 checkpoint) now has a real anchor date to measure from either way. Kip's call.
+
+One more real data-integrity note, not a problem, just worth being aware of: DT was purchased alongside the 3 formally predicted names (AVAV/NVDA/CGNX) but was never logged as a 90-day forward prediction in `prediction_log.json` — the v1.1 refresh only named 3 forward bets. DT has a real `Position` (rank #4/Buy, composite 73.6, framework-derived) but no `PredictionLog` entry, so it won't be included if/when the Nov 30 evaluation checks prediction accuracy. Not fixed here — would need Kip to confirm he wants DT held to the same standard before backdating a prediction record for it.
+
+`positions.json` updated to reflect all of the above: SMH closed, 4 new AI/Robotics positions added, `position_size_pct` left `null` on the new ones rather than guessed (exact live total account value at purchase time wasn't verified this session).
