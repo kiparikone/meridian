@@ -1,5 +1,24 @@
 [
   {
+    "id": "6abc45563dcda791482ea5db",
+    "ticker": "DT",
+    "framework": "AI/Robotics",
+    "predicted_signal": "Buy",
+    "predicted_composite": 73.6,
+    "direction_predicted": "Up",
+    "direction_hit": null,
+    "entry_date": "2026-09-29",
+    "entry_price": 57.12,
+    "target_price": 59.71,
+    "measurement_date": null,
+    "current_price": null,
+    "actual_return_pct": null,
+    "benchmark_return_pct": null,
+    "outperformed": null,
+    "scored_stock_id": "6a95cc6f8a9b37e8f2f8a593",
+    "notes": "Backfilled 9/29/26 at Kip's request ('let's try to get DT scored') -- DT was scored and ranked (#4/BUY, composite 73.6) in the real v1.1 run but wasn't one of the 3 names the refresh formally logged as a 90-day forward prediction (only AVAV/NVDA/CGNX got that). This entry closes that gap so DT is held to the same standard at the Nov 30 checkpoint. IMPORTANT METHODOLOGY NOTE: entry_price ($57.12) is Kip's real fill price from 9/29/26, not a framework-generated snapshot -- more accurate than backdating to 8/31. target_price ($59.71) is sourced EXTERNAL analyst consensus (stockanalysis.com, 36 analysts, Sep 2026), NOT the framework's own internal target methodology -- that formula (whatever produced AVAV's +19%, NVDA's +12%, CGNX's +16% targets) isn't reproducible from the data available this session, and inventing a number to match would be fabrication. So this prediction's implied upside (+4.5%) is NOT apples-to-apples with the other 3's targets -- it's a real, sourced, but methodologically different number. Flagging this explicitly rather than letting it look consistent when it isn't. direction_hit/outperformed/actual_return_pct/benchmark_return_pct/current_price/measurement_date all intentionally blank until evaluated."
+  },
+  {
     "id": "6a95cc7a6e90c9d3c84e9a23",
     "ticker": "CGNX",
     "framework": "AI/Robotics",

@@ -52,3 +52,11 @@ This means the liquidation-to-redeployment transition already happened on 9/29, 
 One more real data-integrity note, not a problem, just worth being aware of: DT was purchased alongside the 3 formally predicted names (AVAV/NVDA/CGNX) but was never logged as a 90-day forward prediction in `prediction_log.json` — the v1.1 refresh only named 3 forward bets. DT has a real `Position` (rank #4/Buy, composite 73.6, framework-derived) but no `PredictionLog` entry, so it won't be included if/when the Nov 30 evaluation checks prediction accuracy. Not fixed here — would need Kip to confirm he wants DT held to the same standard before backdating a prediction record for it.
 
 `positions.json` updated to reflect all of the above: SMH closed, 4 new AI/Robotics positions added, `position_size_pct` left `null` on the new ones rather than guessed (exact live total account value at purchase time wasn't verified this session).
+
+## Update, 2026-09-29 (same day): DT scored, Phase 2 Day-0 locked
+
+Kip's three calls: (1) retry GitHub, (2) get DT scored, (3) **Phase 2 Day-0 = 9/29/26.** Locking that in — Phase 2's clock now runs from the day capital actually moved, not the calendar-round 10/1 target. The already-instrumented Nov 30, 2026 checkpoint (from the v1.1 ScoringRun's `next_run_date`) stands as the first evaluation date for all 4 live positions.
+
+DT scoring gap closed: `prediction_log.json` now has a DT entry (id `6abc45563dcda791482ea5db`), and `scored_stocks.json`'s DT record got its missing live price. Read the notes on both before treating DT as directly comparable to AVAV/NVDA/CGNX — its target price is sourced external analyst consensus (stockanalysis.com), not the framework's own internal target-generation method (unreproducible from what's available this session), so its implied upside (+4.5%) is not on the same footing as the other three's framework-generated targets (+12% to +19%). Real and sourced, just not apples-to-apples — said plainly rather than left to look consistent.
+
+GitHub retry: still blocked, different cause than before — see repo root status / Kip's latest update for the current word on that.
